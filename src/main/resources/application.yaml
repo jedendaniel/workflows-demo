@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: jenkins
+
+  datasource:
+    url: jdbc:mysql://localhost:3309/testdb
+    username: root
+    password: docker
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true

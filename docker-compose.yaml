@@ -1,0 +1,32 @@
+services:
+  workflows-demo-app:
+    build: .
+    depends_on:
+      - workflows-db
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - workflows-demo-network
+    ports:
+      - "8080:8080"
+
+  workflows-db:
+    image: mysql
+    container_name: workflows-demo-db
+    restart: always
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    networks:
+      - workflows-demo-network
+
+#  jenkins:
+#    image: jenkins/jenkins
+
+networks:
+  workflows-demo-network:
+    name: workflows-demo-network
+    driver: bridge
