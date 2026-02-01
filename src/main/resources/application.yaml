@@ -1,11 +1,11 @@
 spring:
   application:
-    name: jenkins
+    name: workflows
 
-  datasource:
-    url: jdbc:mysql://localhost:3309/testdb
-    username: root
-    password: docker
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-      show-sql: true
+#  datasource:
+#    url: jdbc:mysql://localhost:3309/testdb
+#    username: root
+#    password: docker
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#      show-sql: true

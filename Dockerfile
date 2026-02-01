@@ -17,4 +17,5 @@ EXPOSE 8080
 RUN useradd -r -u 1001 appuser
 USER appuser
 
-ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=docker"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
+#ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=docker"]

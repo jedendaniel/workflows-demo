@@ -8,18 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping("home")
+//@RequestMapping("homes")
 @RestController
 public class HomeController {
 
-    private final HomeRepository homeRepository;
+//    private final HomeRepository homeRepository;
 
-    public HomeController(HomeRepository homeRepository) {
-        this.homeRepository = homeRepository;
-    }
+//    public HomeController(HomeRepository homeRepository) {
+//        this.homeRepository = homeRepository;
+//    }
 
     @GetMapping
-    public List<Home> getAll() {
-        return homeRepository.findAll();
+    public List<String> getAll() {
+//        return homeRepository.findAll();
+        return List.of("My cozy home", "Siz bedroom mansion", "Cottage house");
     }
 }
